@@ -1,8 +1,13 @@
 [project]
-name = "my_project"
+name = "stockheatmapcorrelation"
 version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
 dependencies = [
-    "requests",
-    "numpy",
-]  
+    "jupyter>=1.1.1",
+    "lasio>=0.31",
+]
 
+[tool.uv.workspace]
+members = ["project2"]
