@@ -1,0 +1,16 @@
+# Install uv
+FROM python:3.12-slim
+
+# Copy the project into the image
+ADD . /app
+
+# Change the working directory to the `app` directory
+WORKDIR /app
+
+COPY pyproject.toml .
+RUN pip install .
+COPY . .
+
+# Run the application
+# Presuming there is a `my_app` command provided by the project
+CMD ["uv", "run", "hello.py"]
